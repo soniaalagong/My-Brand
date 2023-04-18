@@ -1,0 +1,1352 @@
+/* Parametros */
+    @font-face{
+        font-family: "arimo-regular";
+        src: url(../fonts/Arimo-Regular.ttf);
+        font-style: swap;  
+    }
+    @font-face{
+        font-family: "playfair-regular";
+        src: url(../fonts/PlayfairDisplay-Regular.ttf);
+        font-style: swap;  
+    }
+
+/*Variables*/
+    :root{
+        /*Fuentes*/
+        --fuente-principal: "playfair-regular";
+        --fuente-cuerpo: "arimo-regular";
+
+        /*Tamaños*/
+        --size-h1: 28px;
+        --size-h2: 20px;
+        --size-h3: 21px;
+        --size-span: 18px;
+        --size-menu: 16px;
+        --size-cuerpo: 14px;
+        --size-enlaces: 14px;
+
+        /*Interlineado*/
+        --interlineado: 22.4px;
+
+        /*Colores*/
+        --vainilla-claro: #faf8f0;
+        --beige: #c2b7a4;
+        --chocolate: #201209;
+        --chocolate-claro: #5c341c;
+
+        --detalles-blancos: #fff;
+        --detalles-marrones: #201209;
+
+        --texto-blanco:#fff;
+        --texto-marron: ##201209;
+
+        --fondo-blanco: #fff;
+        --fondo-marron: #201209;
+
+        /*Padding*/
+        --padding-web: 4%;
+    }
+
+/* Normalizadores */
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    h1{
+        font-family: var(--fuente-principal);
+        font-size: var(--size-h1);
+        color: var(--texto-marron);
+    }
+    h2{
+        font-family: var(--fuente-principal);
+        font-size: var(--size-h2);
+        color: var(--texto-blanco);
+    }
+    h3{
+        font-family: var(--fuente-principal);
+        font-size: var(--size-h3);
+        color: var(--texto-marron);
+    }
+    span{
+        font-family: var(--fuente-cuerpo);
+        font-size: var(--size-span);
+        color: var(--vainilla-claro);
+    }
+    p{
+        font-family: var(--fuente-cuerpo);
+        font-size: var(--size-cuerpo);
+        line-height: var(--interlineado);
+        color: var(--texto-marron);        
+    }
+    a{
+        font-family: var(--fuente-principal);
+        font-size: var(--size-enlaces);
+        color: var(--texto-marron);
+        text-decoration: none;
+        /*flex*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        font-family: var(--fuente-principal);
+        font-size: var(--size-enlaces);
+        columns: var(--texto-blanco);
+        background-color: transparent;
+        border: none;
+        /*flex*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        list-style: none;
+    }
+    fieldset{
+        border: none;
+    }
+
+/* Reglas generales */
+
+    /*Body*/
+    body{
+        min-height: 100vh;
+        padding-bottom: 340px;
+        position: relative;
+    }
+
+    /*Marco*/
+    .marco{
+        width:100%;
+        max-width: 1920px;
+        height: inherit;
+        margin:auto;
+    }
+
+    /*Header*/
+    header{
+        width: 100%;
+        max-width: 1920px;
+        height: 60px;
+        background-color: transparent;
+        padding: 0% var(--padding-web); 
+    
+        /*flex*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /*position*/
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        margin: auto;
+        z-index: 1000;
+    }
+    .menuDesk{
+        display: none;
+    }
+    .logo,
+    .btnBars{
+        width: 40px;
+        height: 40px;
+    }
+    .logo{
+        font-size: 30px;
+        text-align: center;
+    }
+    .btnBars{
+        font-size: 25px;
+        justify-content: left;
+    }
+    .overlayMenu{
+        width: 100%;
+        height: 100vh;
+        background-color: transparent;
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1001;
+    }
+    .cajaMenu{
+        width: 150px;
+        background-color: var(--vainilla-claro);
+        border: 1px solid var(--detalles-marrones);
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: var(--padding-web);
+        z-index: 1002;
+    }
+    .cajaMenu a{
+        font-size: var(--size-menu);
+        margin: 10px;
+        justify-content: left;
+    }
+    .cajaMenu a:hover{
+        font-weight: bolder;
+    }
+    .dBlock{
+        display: block !important;
+    }
+    .dFlex{
+        display: flex !important;
+    }
+
+    /*Footer*/
+    footer{
+        width: 100%;
+        max-width: 1920px;
+        height: 340px;
+        padding: 5% var(--padding-web);
+        background-color: var(--chocolate);
+        position: absolute;
+        bottom: 0px;
+    }
+    .subscribe,
+    .contact{
+        width: 100%;
+        height: 48%;    
+    }
+    .subscribe{
+        margin-bottom: 10px;
+    }
+    .contact h2,
+    .subscribe h2{
+        margin-bottom: 15px;
+    }
+    .subscribe p{
+        color: var(--texto-blanco);
+        margin-bottom: 10px;
+    }
+    .subscribe div{
+        /*flex*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .subscribe input{
+        width: 75%;
+        height: 40px;
+        margin-right: 5px;
+    }
+    .subscribe input::placeholder{
+        color: var(--chocolate);
+    }
+    .btnSuscribe{
+        width: 30%;
+        height: 40px;
+        background-color: var(--vainilla-claro);
+        color: var(--texto-marron);
+        border: 1px solid var(--detalles-blancos);
+        font-size: 15px;
+        transition: .5s;
+    }
+    .btnSuscribe:hover{
+        background-color: var(--chocolate);
+        color: var(--texto-blanco);
+        border: 1px solid var(--detalles-blancos);
+    }  
+    .contact h2{
+        margin-top: 20px;
+    }
+    .contact div{
+        /*flex*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact a{
+        color: var(--texto-blanco);
+    }
+    .linea{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+    .linea::before{
+        content: "";
+        display: block;
+        width: 215px;
+        height: 1px;
+        background-color: var(--fondo-blanco);
+        position: absolute;
+        left: 1px;
+        bottom: 40px;
+        z-index: 2;
+    }
+
+    /*Botón inicio*/
+    .btnInicio{
+        width: 35px;
+        height: 35px;
+        border: 1px solid var(--detalles-marrones);
+        border-radius: 50%;
+        background-color: var(--fondo-blanco);
+        font-size: 15px;
+        display: none;
+        position: fixed;
+        right: var(--padding-web);
+        bottom: 10px;
+        z-index: 1499;
+    }
+
+    /*Modal suscríbete*/
+    .overlay{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(00, 00, 00, 0.5);
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1500;
+    }
+    .modalSuscribete,
+    .modalSuscribeteMvl{
+        width: 90%;
+        height: 40vh;
+        background-color: var(--vainilla-claro);
+        display: none;
+        padding: 5% var(--padding-web);
+        margin: auto;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        z-index: 2001;
+    }
+    .modalSuscribeteMvl{
+        height: 25vh;
+    }
+    .modalSuscribete h2,
+    .modalSuscribete h3,
+    .modalSuscribeteMvl h3{
+        color: var(--texto-marron);
+        text-align: center;
+    }
+    .modalSuscribeteMvl h3{
+        margin-bottom: 10px;
+    }
+    .modalSuscribete p{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .cerrarModal{
+        width: 25%;
+        height: 30px;
+        background-color: var(--fondo-marron);
+        color: var(--texto-blanco);
+        margin-left: 195px;
+    }
+    .modalSuscribeteMvl .cerrarModal{
+        margin: auto;
+    }
+   
+/* Reglas epecíficas */
+    
+    /* Section s1 (carrousel) */
+    .s1{
+        width: 100%;
+        height: 500px; 
+        padding-top: 60px;
+        background-color: var(--vainilla-claro);
+    }
+    .mainCarousel,
+    .carousel-cell{
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-cell img{
+        width: 100%;
+        height: 400px; 
+        padding: 0% var(--padding-web);
+        object-fit: cover;
+        object-position: center;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+    .flickity-button{ /* Eliminar las flechas*/
+        display: none;
+    }
+    .flickity-page-dots{
+        bottom: 7px;
+    }
+
+
+    /* Main */
+    .joyas{
+        width: 100%;  
+        background-color: var(--beige);    
+    }
+    .separador{
+        width: 100%;
+        background-color: var(--chocolate-claro);
+        padding: 10% var(--padding-web);
+        text-align: center;
+    }
+    .separador p{
+        margin-bottom: 10px;
+        color: var(--texto-blanco);
+    }
+    .btnAccesos{
+        width: 134px;
+        height: 55px;
+        border: 2px solid var(--detalles-blancos);
+        background-color: var(--vainilla-claro);
+        color: var(--texto-marron);
+        display: flex;
+        margin: auto;
+        transition: 1s;
+    }
+    .btnAccesos:hover{
+        color: var(--texto-blanco);
+        background-color: var(--beige);
+    }
+    .piezas{
+        width: 100%;
+    }
+    .imgColeccion{
+        width: 100%;
+        height: 25%;
+        padding: 5% var(--padding-web);
+    }
+    .imgColeccion img{
+        width: 280px;
+        height: 280px;
+        aspect-ratio: 1/1;
+        display: flex;
+        margin: auto;
+        object-fit: cover;
+        object-position: center;
+        transition: 1s;
+        transform-origin: center;
+    }
+    .imgColeccion:last-of-type img{
+        object-position: top;
+    }
+    .imgColeccion figure:hover img{
+        transform: scale(1.1, 1.1);
+    }
+    .imgColeccion article{
+        width: 210px;
+        height: 70px;
+        background-color: var(--vainilla-claro);
+        margin: auto;
+        display: flex; /*Con esto pasarían a ser de tipo linea pero no quiero que el eje X sea el principal...*/
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: 30px;
+        z-index: 1;
+    } 
+    .imgColeccion h3{
+        margin: 0px 10px;
+    }
+    .btnAboutJoya{
+        width: 130px;
+        height: 35px;
+        color: var(--texto-blanco);
+        background-color: var(--chocolate);
+        margin: auto;
+        position: relative;
+        bottom: 45px;
+        z-index: 2;
+    }
+
+    /*Section S2*/
+    .s2{
+        width: 100%;
+        height: 500px;
+        padding: 7% var(--padding-web);
+        background-image: url(../img/imgfondos2.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+    .s2 h1,
+    .s2 p{
+        color: var(--texto-blanco);
+    }
+    .s2 p{
+        width: 155px;
+        margin: 30px 40px;
+    }
+    .btnS2{
+        width: 170px;
+        height: 55px;
+        margin-left: 40px;
+        color: var(--texto-blanco);
+        border: 3px solid var(--detalles-blancos);
+        transition: 1s;
+    }
+    .btnS2:hover{
+        border: 3px solid var(--chocolate);
+        background-color: var(--chocolate);
+    }
+
+    /*HTML JOYAS INDIVIDUALES*/
+
+    /*Main*/
+    .mainJoyas{
+        width: 100%;
+        height: 110vh;
+        padding: 60px var(--padding-web) 10% var(--padding-web);
+        background-color: var(--vainilla-claro);
+    }
+    .mainJoyas figure{
+        height: 280px;
+        /*Para el efecto hover*/
+        position: relative;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+    .mainJoyas img{
+        width: 280px;
+        height: 280px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+        /*Para el efecto hover*/
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        margin-left: -140px; /*Le restamos la mitad de lo que mide para que se centre*/
+        z-index: 2;
+        transition: 1s;
+    } 
+    .mainJoyas .joyaCascada{ /*Excepción de la joya Cascada, es necesario ajustar la posición de la imagen*/
+        object-position: top ;
+    }
+    .mainJoyas .joya1-1{
+        opacity: 0;
+    }
+    .mainJoyas figure:hover .joya1-1{
+        opacity: 1;
+    }
+    .mainJoyas figure:hover .joya1{
+        opacity: 0;
+    }
+    .mainJoyas article{
+        width: 100%;
+        margin-top: 15px;
+        text-align: justify;
+    }
+    .mainJoyas h1{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    
+    /*HTML SOBRE MÍ Y MYBRAND*/
+
+    /*Main*/
+    .mainAbout{
+        width: 100%;
+        padding-top: 60px;      
+        text-align: justify;
+        background-color: var(--vainilla-claro);
+    }
+    .aboutMB,
+    .aboutMe{
+        width: 100%;
+        height: 50%;
+        padding: 1% var(--padding-web);
+    }
+    .aboutMB{
+        background-color: var(--beige);
+    }
+    .mainAbout figure{
+        padding: 8% 0%;
+    }
+    .mainAbout img{
+        width: 275px;
+        height: 275px;
+        display: flex;
+        margin: auto; 
+        object-fit: cover;
+        object-position: center;
+    }
+    .mainAbout h2,
+    .mainAbout p{        
+        color: var(--texto-marron);
+    }
+    .mainAbout h2{
+        margin-bottom: 10px;
+    }
+    .redes{
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        /*flex*/
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+    .misRedes{
+        width: 40px;
+        height: 40px;
+        text-align: right;
+        font-size: 25px;
+    }
+
+
+/* Responsive */
+@media (min-width: 768px){
+    /*Parámetros*/
+    :root{
+        --size-h3: 20px;
+        --size-cuerpo: 20px;
+        --size-enlaces: 20px;
+        --size-menu: 20px;
+
+        --padding-web: 2%;
+
+        /*Interlineado*/
+        --interlineado: 37px;
+    }
+
+/* Reglas generales*/
+
+    /*BODY*/
+    body{
+        padding-bottom: 290px;
+    }
+
+    /*HEADER*/
+    header{        
+        height: 100px;
+    }
+    .logo,
+    .btnBars{
+        width: 60px;
+        height: 60px;
+    }
+    .logo{
+        font-size: 40px;
+        text-align: center;
+    }
+    .btnBars{
+        font-size: 35px;
+        justify-content: left;
+    }
+    .cajaMenu{
+        width: 200px;
+    }
+    .cajaMenu a{
+        font-size: var(--size-menu);
+    }
+
+    /*Botón inicio*/
+    .btnInicio{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    /*FOOTER*/
+    footer{
+        height: 290px;
+        padding: var(--padding-web);
+        /*flex*/
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact,
+    .subscribe{  
+        width: 48%;
+        height: 100%;
+    } 
+    .subscribe{
+        padding: 3% 0%;
+    }
+    .contact h2,
+    .subscribe h2{
+        margin-bottom: 20px;
+    }
+    .subscribe p{
+        font-size: 18px;
+    }
+    .subscribe input,
+    .subscribe input::placeholder{
+        font-size: 15px;
+    }
+    .linea::before{        
+        width: 1px;
+        height: 170px; 
+        left: -15px; 
+        bottom: -150px;
+    }
+
+    /*Modal suscribirse*/
+    .modalSuscribete{ 
+        width: 65%;
+        height: 30vh;
+    }
+    .modalSuscribete article{
+        display: block;
+        margin: auto;
+    }
+    .modalSuscribete h3{
+        margin: var(--padding-web) 0px;
+    }
+    .cerrarModal{
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 350px;
+    }
+
+/* Reglas específicas*/
+
+    /*S1*/
+    .s1{        
+        height: 700px; 
+        padding-top: 100px;
+    }
+    .carousel-cell img{
+        height: 550px;         
+        padding: 0%;
+        object-position: top;
+    }
+
+    /*MAIN*/
+    .separador{
+        height: 250px;
+        padding: 5% var(--padding-web);
+    }
+    .separador p{
+        margin-bottom: 30px;
+    }
+    .btnAccesos{
+        width: 180px;
+        height: 70px;
+    }
+    .imgColeccion img{
+        width: 500px;
+        height: 500px;
+    }
+    .imgColeccion article{
+        width: 300px;
+        height: 80px;
+        bottom: 40px;
+    } 
+    .btnAboutJoya{
+        width: 160px;
+        height: 50px;
+        bottom: 55px;
+    }
+
+    /*S2*/
+    .s2{        
+        height: 650px;
+    }
+    .s2 p{
+        width: 250px;
+    }
+    .btnS2{
+        width: 200px;
+        height: 60px;
+    }
+
+
+    /*HTML JOYAS INDIVIDUALES*/
+    .mainJoyas{
+        height: 100vh;
+        padding: 100px var(--padding-web) 5% var(--padding-web);
+    }
+    .mainJoyas figure{
+        height: 500px;
+    }
+    .mainJoyas img{
+        width: 500px;
+        height: 500px;
+        margin-left: -250px; 
+    } 
+    .mainJoyas article{
+        width: 90%;
+        margin: auto;
+        padding-top: 30px;
+    }
+    .mainJoyas h1{
+        margin-bottom: 30px;
+    }
+
+
+    /*HTML SOBRE MÍ Y MYBRAND*/
+    .mainAbout{
+        padding-top: 100px;   
+    }
+    .mainAbout h2{
+        font-size: 22px;
+    }
+    .mainAbout img{
+        width: 300px;
+        height: 300px;
+    }
+    .mainAbout figure{
+        padding: 3% 0%;
+    }
+    .mainAbout h2{
+        margin-bottom: 15px;
+    }
+    .misRedes{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+}
+
+
+
+@media(min-width: 1280px){
+    /*Parámetros*/
+    :root{
+        --size-h1: 30px;
+        --size-h3: 25px;
+        --size-h2: 25px;
+        --size-cuerpo: 25px;
+        --size-enlaces: 23px;
+        --size-menu: 23px;
+
+        --padding-web: 3%;
+
+        /*Interlineado*/
+        --interlineado: 37px;
+    }
+
+/* Reglas generales*/
+
+    /*BODY*/
+    body{
+        padding-bottom: 330px;
+    }
+
+    /*HEADER*/
+    header{        
+        height: 115px;
+    }
+    .btnBars{
+        display: none;
+    }
+    .menuDesk{
+        display: flex;
+    }
+    .menuDesk a{
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    .logo{
+        width: 60px;
+        height: 60px;
+        font-size: 45px;
+    }
+
+    /*Botón inicio*/
+    .btnInicio{
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+    }
+
+    /*FOOTER*/
+    footer{
+        height: 330px;
+    }
+    .contact,
+    .subscribe{  
+        width: 48%;
+        height: 100%;
+    } 
+    .subscribe{
+        padding: 1.5% 0%;
+    }
+    .subscribe p{
+        font-size: 23px;
+    }
+    .btnSuscribe{
+        height: 50px;
+        font-size: 22px;
+        margin-top: 10px;
+    }
+    .subscribe input{
+        height: 50px;
+        margin-top: 10px;
+    }
+    .contact h2,
+    .subscribe h2{
+        margin-bottom: 20px;
+    }
+    .subscribe p{
+        font-size: 20px;
+    }
+    .subscribe input,
+    .subscribe input::placeholder{
+        font-size: 18px;
+    }
+    .linea::before{        
+        width: 1px;
+        height: 170px; 
+        left: -25px; 
+        bottom: -150px;
+    }
+
+    /*Modal suscribirse*/
+    .modalSuscribete{ 
+        width: 50%;
+        height: 50vh;
+    }
+    .cerrarModal{
+        margin-left: 420px;
+    }
+
+/* Reglas específicas*/
+
+    /*S1*/
+    .s1{        
+        height: 720px; 
+        padding-top: 115px;
+    }
+    .carousel-cell img{
+        height: 610px;
+    }
+    .flickity-page-dots .dot {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        background: transparent;
+        border: 1px solid var(--vainilla-claro);
+    }
+    .flickity-page-dots .dot.is-selected {
+        background: var(--vainilla-claro);
+    }
+
+    /*MAIN*/
+    .separador{
+        height: 300px;
+        padding: 5% 5%;
+    }
+    .btnAccesos{
+        width: 200px;
+        height: 70px;
+    }
+    .piezas{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }    
+    .imgColeccion{
+        width: 50%;
+        height: 50%;
+    } 
+    .imgColeccion img{
+        width: 450px;
+        height: 450px;
+    }
+    .imgColeccion article{
+        width: 310px;
+        height: 90px;
+    }
+    .btnAboutJoya{
+        width: 170px;
+        height: 60px;
+        bottom: 60px;
+    }
+    
+    /*S2*/
+    .s2{        
+        height: 700px;
+    }
+    .s2 h1{
+        width: 470px;
+    }
+    .s2 p{
+        width: 70%;
+    }
+    .s2 h1,
+    .s2 p{
+        text-align: center;
+        display: flex;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .btnS2{
+        width: 200px;
+        height: 80px;
+        margin: auto;
+    }
+
+
+    /*HTML JOYAS INDIVIDUALES*/
+    .mainJoyas{
+        padding: 115px var(--padding-web) 5% var(--padding-web);
+        background-color: var(--beige);
+        /*flex*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .mainJoyas figure{
+        width: 500px;   
+        height: 500px;
+        order: 1;
+    }
+    .mainJoyas img{
+        width: 500px;
+        height: 500px;
+        margin-left: -250px; 
+    } 
+    .mainJoyas article{
+        width: 48%;
+        margin: initial;
+        padding-top: 0px;
+    }
+    .mainJoyas h1{
+        text-align: left;
+    }
+
+
+    /*HTML SOBRE MÍ Y MYBRAND*/
+    .mainAbout{    
+        padding-top: 115px; 
+    }
+    .mainAbout p{               
+        font-size: 20px;
+    }
+    .mainAbout h2{
+        font-size: var(--size-h1);
+    }
+    .aboutMB,
+    .aboutMe{
+        height: 80vh; /* Dado este ancho, para que al estirar la página no se vean espacios. */
+        /*flex*/
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .mainAbout article{
+        width: 60%;
+    }
+    .mainAbout figure{
+        width: 40%;
+    }
+    .aboutMB img,
+    .aboutMe img{
+        width: 390px;
+        height: 390px;
+    }
+    .aboutMB article{
+        order: -1;
+    }
+    .misRedes{
+        width: 60px;
+        height: 60px;
+        font-size: 35px;
+    }
+}
+
+
+@media(min-width: 1366px){
+    /*Parámetros*/
+    :root{
+        --size-h1: 30px;
+        --size-h3: 22px;
+        --size-h2: 22px;
+        --size-cuerpo: 22px;
+        --size-enlaces: 21px;
+        --size-menu: 21px;
+
+        /*Interlineado*/
+        --interlineado: 33px;
+    }
+
+/* Reglas generales*/
+
+    /*BODY*/
+    body{
+        padding-bottom: 280px;
+    }
+
+    /*HEADER*/
+    header{        
+        height: 100px;
+    }
+
+    /*FOOTER*/
+    footer{
+        height: 280px;
+    }
+    .btnSuscribe{
+        height: 45px;
+        font-size: 20px;
+    }
+    .subscribe input{
+        height: 45px;
+    }
+    .subscribe p{
+        font-size: 20px;
+    }
+    .subscribe input,
+    .subscribe input::placeholder{
+        font-size: 16px;
+    }
+
+    /*Modal suscribirse*/
+    .modalSuscribete{ 
+        width: 50%;
+        height: 55vh;
+    }
+    .cerrarModal{
+        margin-left: 445px;
+    }
+
+/* Reglas específicas*/
+
+    /*S1*/
+    .s1{        
+        height: 720px; 
+        padding-top: 100px;
+    }
+    .carousel-cell img{
+        height: 620px;
+    }
+
+    /*MAIN*/
+    .separador{
+        height: 255px;
+    }
+    .btnAccesos{
+        width: 190px;
+        height: 60px;
+    }
+    .btnAboutJoya{
+        bottom: 65px;
+    }
+
+
+    /*HTML JOYAS INDIVIDUALES*/
+    .mainJoyas{    
+        padding: 100px var(--padding-web) 5% var(--padding-web);
+    }
+
+
+    /*HTML SOBRE MÍ Y MYBRAND*/
+    .mainAbout{      
+        padding-top: 100px; 
+    }
+    .aboutMB img,
+    .aboutMe img{
+        width: 370px;
+        height: 370px;
+    }
+}
+
+
+
+@media(min-width: 1920px){
+    /*Parámetros*/
+    :root{
+        --size-h1: 45px;
+        --size-h3: 33px;
+        --size-h2: 35px;
+        --size-cuerpo: 30px;
+        --size-enlaces: 30px;
+        --size-menu: 25px;
+
+        --padding-web: 2%;
+
+        /*Interlineado*/
+        --interlineado: 37px;
+    }
+
+/* Reglas generales*/
+
+    /*BODY*/
+    body{
+        padding-bottom: 400px;
+    }
+
+    /*HEADER*/
+    header{        
+        height: 200px;
+    }
+    .logo{
+        width: 80px;
+        height: 80px;
+        font-size: 65px;
+    }
+    .menuDesk a{
+        font-size: 30px;
+    }
+
+    /*Botón inicio*/
+    .btnInicio{
+        width: 55px;
+        height: 55px;
+        font-size: 35px;
+    }
+
+    /*FOOTER*/
+    footer{
+        height: 400px;
+    }
+    .subscribe{
+        padding: 1% 0%;
+    }
+    .subscribe p{
+        font-size: 30px;
+    }
+    .btnSuscribe{
+        height: 70px;
+        font-size: 28px;
+    }
+    .subscribe input{
+        height: 70px;
+    }
+    .contact h2,
+    .subscribe h2{
+        margin-bottom: 30px;
+    }
+    .subscribe input,
+    .subscribe input::placeholder{
+        font-size: 25px;
+    }
+    .linea::before{        
+        width: 1px;
+        height: 170px; 
+        left: -35px; 
+        bottom: -150px;
+    }
+    
+    /*Modal suscribirse*/
+    .modalSuscribete h3{        
+        margin-top: 30px;      
+        margin-bottom: 50px;
+    }
+    .modalSuscribete p{
+        font-size: 30px;
+    }
+    .cerrarModal{
+        width: 180px;
+        height: 70px;
+        margin-top: 30px;
+        margin-left: 700px;
+    }
+
+/* Reglas específicas*/
+
+    /*S1*/
+    .s1{        
+        height: 1080px;
+        padding-top: 200px;
+    }
+    .carousel-cell img{
+        height: 1080px;
+    }
+    .flickity-page-dots .dot {
+        width: 14px;
+        height: 14px;
+        opacity: 1;
+        border: 1px solid var(--vainilla-claro);
+    }
+
+    /*MAIN*/
+
+    .separador{
+        height: 400px;
+        padding: 5% 5%;
+    }
+    .separador p{
+        width: 70%;
+        display: flex;
+        margin: auto;
+    }
+    .btnAccesos{
+        width: 300px;
+        height: 100px;
+        margin-top: 25px;
+    }   
+    .imgColeccion img{
+        width: 700px;
+        height: 700px;
+    }
+    .imgColeccion article{
+        width: 450px;
+        height: 120px;
+    } 
+    .btnAboutJoya{
+        width: 240px;
+        height: 75px;
+        bottom: 70px;
+    }
+    
+    /*S2*/
+    .s2{        
+        height: 950px;
+    }
+    .s2 h1{
+        width: 700px;
+    }
+    .btnS2{
+        width: 280px;
+        height: 120px;
+        font-size: 30px;
+        margin: auto;
+    }
+
+
+    /*HTML JOYAS INDIVIDUALES*/
+    .mainJoyas{
+        padding: 200px var(--padding-web) 5% var(--padding-web);
+        justify-content: space-around;
+    }
+    .mainJoyas figure{
+        width: 700px;   
+        height: 700px;
+    }
+    .mainJoyas img{
+        width: 700px;
+        height: 700px;
+        margin-left: -350px; 
+    } 
+    .mainJoyas article{
+        width: 40%;
+        margin: initial;
+        padding-top: 0px;
+    }
+
+
+    /*HTML SOBRE MÍ Y MYBRAND*/
+    .mainAbout{        
+        padding-top: 200px; 
+    }
+    .mainAbout p{               
+        font-size: 28px;
+    }
+    .aboutMB img,
+    .aboutMe img{
+        width: 570px;
+        height: 570px;
+    }
+    .mainAbout h2{
+        margin-bottom: 60px;
+    }
+    .redes{
+        height: 100px;
+        margin-top: 20px;
+    }
+    .misRedes{
+        width: 80px;
+        height: 80px;
+        font-size: 50px;
+    }
+}
