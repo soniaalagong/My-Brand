@@ -1,4 +1,4 @@
-![Imagen del proyecto](https://github.com/soniaalagong/My-Brand/assets/portadaMB.png)
+![Imagen del proyecto](https://github.com/soniaalagong/My-Brand/blob/main/assets/portadaMB.png)
 
 # My Brand
 
@@ -10,8 +10,8 @@ Página web de My Brand, una marca de joyas que creé para, posteriormente, maqu
 ## Tecnologías usadas
 
 ![HTML](https://img.shields.io/static/v1?label=&message=Html&color=orange&logo=html5&logoColor=white&style=for-the-badge)
-![CSS](https://img.shields.io/static/v1?label=&message=CSS&color=CC6699&logo=css3&logoColor=white&style=for-the-badge)
-![JavaScript](https://img.shields.io/static/v1?label=&message=JavaScript&color=3178C6&logo=javascript&logoColor=white&style=for-the-badge)
+![CSS](https://img.shields.io/static/v1?label=&message=CSS&color=3178C6&logo=css3&logoColor=white&style=for-the-badge)
+![JavaScript](https://img.shields.io/static/v1?label=&message=JavaScript&color=F0DB4F&logo=javascript&logoColor=white&style=for-the-badge)
 
 
 ## 👩‍💻 Sonia Alagón
