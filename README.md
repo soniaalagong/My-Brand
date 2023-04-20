@@ -4,7 +4,7 @@
 
 Página web de My Brand, una marca de joyas que creé para, posteriormente, maquetar como proyecto final del módulo en Diseño Web HTML5, CSS3 y JavaScript que estudié en CEI: Escuela de Diseño y Marketing Digital.
 
-[![Echa un vistazo](https://img.shields.io/static/v1?label=&message=Echa%20un%20vistazo&color=5c341c&style=for-the-badge)](https://my-brand-dusky.vercel.app/index.html)
+[![Echa un vistazo](https://img.shields.io/static/v1?label=&message=Echa%20un%20vistazo&color=5c341c&style=for-the-badge)](https://my-brand-catalogue.vercel.app/index.html)
 
 
 ## Tecnologías usadas
