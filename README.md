@@ -16,7 +16,7 @@ Página web de My Brand, una marca de joyas que creé para, posteriormente, maqu
 
 ## 👩‍💻 Sonia Alagón
  
-¡Hola! Soy system developer y fullstack web developer. ¿Quieres saber un poco más? 
+¡Hola! Soy System Developer y Fullstack Web Developer. ¿Quieres saber un poco más? 
 
 [![linkedin](https://img.shields.io/static/v1?label=&message=linkedin&color=0e76a8&logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/in/soniaalagong)
 [![github](https://img.shields.io/static/v1?label=&message=github&color=171515&logo=github&logoColor=white&style=for-the-badge)](https://github.com/soniaalagong)
